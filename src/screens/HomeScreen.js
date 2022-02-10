@@ -1,10 +1,39 @@
 import React from 'react';
-import { Text, View } from 'react-native';
-
+import { FlatList, Text, View } from 'react-native';
 const HomeScreen = () => {
-  return (<View>
-            <Text>hola mundo</Text>
-        </View>);
+
+  const lista = [
+    {
+      nombre:'Estrella',
+    },
+    {
+      nombre:'Marcos'
+    },
+    {
+      nombre:'Lucas'
+    },
+    {
+      nombre:'Andres'
+    }
+  ]
+
+  const Item = ({ nombre }) => (
+    <View>
+      <Text >{nombre}</Text>
+    </View>
+  );
+  const renderItem = ({ item }) => (
+    <Item nombre={item.nombre} />
+  );
+  return (
+          <View style={{flex:1}}>
+            <FlatList
+            data={lista}
+            renderItem={renderItem}
+            horizontal={true}
+            />
+          </View>
+        );
 };
 
 export default HomeScreen;
