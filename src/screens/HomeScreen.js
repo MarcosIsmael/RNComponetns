@@ -7,20 +7,14 @@ const HomeScreen = () => {
   const lista = [
     {
       nombre:'Estrella',
-      icono:'star-outline'
+      icono:'star-outline',
+      component : 'Animation101Screen'
     },
     {
       nombre:'Marcos',
-      icono: 'cube-outline'
+      icono: 'cube-outline',
+      component:'Animation102Screen'
     },
-    {
-      nombre:'Lucas',
-      icono:'body-outline'
-    },
-    {
-      nombre:'Andres',
-      icono:'beer-outline'
-    }
   ]
 
   const item = ({ nombre }) => {
