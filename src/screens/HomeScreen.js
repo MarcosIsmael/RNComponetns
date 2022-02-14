@@ -1,21 +1,11 @@
 import React from 'react';
 import { FlatList, Text, View } from 'react-native';
 import FlatListMenuItem from '../components/FlatListMenuItem';
+import HeaderTitle from '../components/HeaderTitle';
+import { MenuItems } from '../data/MenuItems';
 import { styles } from '../theme/AppTheme';
 const HomeScreen = () => {
 
-  const lista = [
-    {
-      nombre:'Estrella',
-      icono:'star-outline',
-      component : 'Animation101Screen'
-    },
-    {
-      nombre:'Marcos',
-      icono: 'cube-outline',
-      component:'Animation102Screen'
-    },
-  ]
 
   const item = ({ nombre }) => {
    return <View>
@@ -23,13 +13,6 @@ const HomeScreen = () => {
     </View>
   ;}
 
-  const renderListHeader = ()=>{
-    return (
-        <View style={{marginTop:20}}>
-          <Text style={styles.title}> opciones de Menu</Text>
-        </View>
-    )
-  }
 
 
   const separator = ()=>{
@@ -40,9 +23,9 @@ const HomeScreen = () => {
   return (
           <View style={{flex:1, ...styles.marginGlobal}}>
             <FlatList
-            data={lista}
+            data={MenuItems}
             renderItem={({item})=> <FlatListMenuItem item={item}/>}
-            ListHeaderComponent={renderListHeader}
+            ListHeaderComponent={()=> <HeaderTitle title='opciones de Menu'/>}
             ItemSeparatorComponent={separator}
             />
           </View>

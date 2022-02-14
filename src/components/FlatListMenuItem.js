@@ -12,17 +12,17 @@ const FlatListMenuItem = ({item}) => {
       >
         <View style={styles.container}>
             <Icon
-            name={item.icono}
+            name={item.icon}
             size={23}
-            color='gray'
+            color='#5856d6'
             />
             <View>
-                <Text style={styles.itemText}>{item.nombre}</Text>
+                <Text style={styles.itemText}>{item.name}</Text>
             </View>
             <Icon
             name='arrow-forward-circle-outline'
             size={23}
-            color='gray'
+            color='#5856d6'
             />
         </View>
       </TouchableOpacity>
