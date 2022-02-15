@@ -20,8 +20,8 @@ export const MenuItems = [
         component : 'AlertScreen'
     },
     {
-        name:'TextInput',
-        icon:'document-text-outline',
-        component : 'TextInputScreen'
+        name:'Pull to refresh',
+        icon:'refresh-circle-outline',
+        component : 'PullToRefresh'
     },
   ]
