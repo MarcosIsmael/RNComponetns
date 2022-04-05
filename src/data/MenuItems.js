@@ -29,4 +29,14 @@ export const MenuItems = [
         icon:'list-outline',
         component : 'SectionListScreen'
     },
+    {
+        name:'Modal',
+        icon:'copy-outline',
+        component : 'ModalScreen'
+    },
+    {
+        name:'infinity scroll',
+        icon:'download-outline',
+        component : 'InfinityScrollScreen'
+    },
   ]
